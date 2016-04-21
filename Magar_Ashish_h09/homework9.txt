@@ -1,0 +1,33 @@
+Homework 9
+
+Add the files from the bst homework to the avl folder.
+
+Given the following function definitions: void cleanAvl(struct avlTree *t) and void cleanAvl_r(struct avlLeaf *lf).
+This function is to be added to the files avl.h and avl.c. These functions will free all memory associated with the avl
+tree.
+
+Given the following function definitions: int searchAvl(struct avlTree *t,struct data *d) and int searchAvl_r(struct
+avlLeaf *curr,struct data *d). These functions are to be added to the files avl.h avl.c. These function will search the
+avl tree in lg(n) time. If the data element in the current leaf is the same as the input data variable, then return 1. If no
+item is found to be equal then return 0.
+
+Given the following function definitions: int searchBst(struct tree *t, struct data *d) and int searchBst_r(struct leaf
+*curr,struct data *d). These functions will be added to the files bst.h and bst.c. These function will search the bst tree
+in lg(n) time. If the da\ ta element in the current leaf is the same as the input data variable, then return 1. If no item is
+found to beequal then return 0.
+Modify your main.c file to take command line arguements. The value to be entered on the command line is a single
+integer. An example of this would be the following:
+./main 3
+
+In the main function you are to take the value from the command line, and multiply it by 1000000. The result of this
+multiplication will be the number of items you are to add to the bst and avl trees. This will also be the number of
+items that need you need to seach for int both trees. When adding items to the bst and avl tree you are to add random
+data structures. When searching for items in the bst and avl trees, you are to search for randomly created data
+structures. So in the above example you would add 3000000 random items to the avl tree and 3000000 random items
+to the bst tree. Then you will search for 3000000 random data elements in the avl tree and 3000000 random data
+elements in the bst.
+
+You are to time how long it takes to insert all of the items into the avl tree and them print out the time. You are to
+then time how long it takes to insert all of the items into the bst. Then time how long it takes to search for all of the
+items in the avl tree. And finally time how long it takes to search for all of the items in the bst tree. Be sure that all
+data is free'd before the program finishes.

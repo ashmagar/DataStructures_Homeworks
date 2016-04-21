@@ -1,0 +1,28 @@
+Homework 5
+
+For this homework you will extend the vector data structure that we have been working on in class with the following
+functions
+
+Given the following function definition: void addBack(struct vector *vec,struct data *dta). This function will add the
+data element to the back of the vector
+
+Given the following funciton definition: void removeFront(struct vector *vec). This function will remove the
+element from the front of the vector.
+
+Given the following function definition: float sumVector(struct vector *vec). This function will get the sum of all of
+the the data structs in the vector. Us the sumData function from data.h to get the sum of each data element.
+
+Given the following function definition: struct vector* cloneVector(struct vector *vec). This function will create a
+copy of the input vector. The new vector will have it's own independent data elements and will not share pointers
+with the input vector. This is called a deep copy.
+
+Given the following function definition: int compareVectors(struct vector *vec1,struct vector *vec2). This function
+will compare two vectors and return 1 if they are the same and 0 if they are not. Two vectors are said to be equal if
+they have the same size and the data elements at each position in the array are the same. So for example vec1-
+>array[0] = vec2->array[0], vec1->array[1] = vec2->array[1], ...,vec1->array[n] = vec2->array[n].
+
+Given the following function definition: void reverseVector(struct vector *vec). This function will reverse the
+elements in the vector's array. You are to reverse the elements in place, meaning you can not create a new vector for
+this.
+
+Given the following function definition: void cleanVector(struct vector *vec). This function will free all memory

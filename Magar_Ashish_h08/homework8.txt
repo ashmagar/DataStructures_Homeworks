@@ -1,0 +1,57 @@
+Homework 8
+
+Given the following function definitions: void preOrderBst(struct tree *t) and void preOrderBst_r(struct leaf *lf).
+The function will print out the tree in pre order. preOrderBst is called from the main function.
+
+Given the following function definitions: void postOrderBst(struct tree *t) and void postOrderBst_r(struct leaf *lf).
+The function will print out the tree in post order. postOrderBst is called from the main function.
+
+Given the following function definitions: struct data* getMaxData(struct tree *tr) and struct data*
+getMaxData_r(struct leaf* lf). Write a function that recursively finds the data structure with the largest value in the
+bst. Return a pointer to the data element with the largest value. The function getMaxData is called in the main
+function. If tree is empty return NULL. If two item have the max value then return the first one found. The max
+refers to the item with largest sumData
+
+Given the following function definitions: struct data* getMimData(struct tree *tr) and struct data*
+getMimData_r(struct leaf* lf). Write a function that recursively finds the data structure with the smallest value in the
+bst. Return a pointer to the data element with the smallest value. The function getMinData is called in the main
+function. If tree is empty return NULL. If two item have the max value then return the first one found. The min
+refers to the item with the smallest sumData
+
+Given the following function definitions: int getBstHeight(struct tree *tr) and int getBstHeight_r(struct leaf* lf).
+These functions will recursively find the height of the bst. The height is defined as the max depth of the tree. The
+height will be returned as an integer. GetBstHeight will be called from the main function.
+
+Given the following function definitions: void printInRange(struct tree *tr, float begin, float end) and void
+printInRange_r(struct leaf* lf, float begin,float end). This function will print out all of the elements whose sum is
+greater than begin and less than end. The elements should be printed out inOrder. PrintInRange will be called from
+the main function.
+
+Given the following function definitions: int isCompleteBst(struct tree *tr) and int isCompleteBst_r(struct leaf* lf).
+These functions will test if the bst is complete. A bst is said to be complete if all of the leaves terminate at the same
+level. If the bst is complete return 1, if it is not complete then return 0. IsCompleteBst will be called from the main
+function.
+
+Given the following function definitions: int isFullBst(struct tree *tr) and int isFullBst_r(struct leaf *lf). These
+functions will test if the bst is a full tree. A bst is said to be full if every node has 2 children except for the leaves. If
+the tree is full then return 1, else return 0.
+
+Given the following function definitions: void reverseBST(struct tree *t) and void reverseBST_r(struct leaf *lf). This
+function will reverse the nodes in the binary search tree. When this function is finished the bst should be a mirror
+image of its original form. So elements that are less than the root will be on the right and elements that are greater
+will be on the left. reverseBST will be called from the main function.
+
+Given the following function definitions: float sumLeaves(struct tree *t) and float sumLeaves_r(struct leaf *lf).
+These functions will calculate the sum of all of the leaves in the bst. A leaf is a node that has no children. sumLeaves
+will be called from the main function.
+
+Given the following function definition: printBreadthFirstSearch(struct tree *t). This function will use a queue to
+print the tree in breadth first order. Use the queue code provided in the bst folder. You do not have to change
+anything in either the dlinklist or queue files.
+
+Given the following function definition: printDepthFirstSearch(struct tree *t). This function will use a stack to print
+the tree in depth first order. Use the stack code provided in the bst folder. You do not have to change anything in
+either the dlinklist or stack files.
+
+Given the following function definitions: void cleanBST(sruct tree *t) and void cleanBST_r(struct leaf *lf). This
+function will free all memory associated with the binary search tree.

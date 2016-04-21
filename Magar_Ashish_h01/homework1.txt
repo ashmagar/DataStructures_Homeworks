@@ -1,0 +1,20 @@
+Homework 1
+
+Create a function with the following function definition: void addValues(int a,int b,int c). You are to create a
+function that will take all of the input values and add them together. Once the values have been added, you are to
+print them out using printf.
+create a function with the following function definition: double divideValues(float value1,float value2, float value3).
+You are to create a function that will first divide the input variables value1 by the input variable value2. You will
+then take the result from the first division and divide that by the input variable value3. The result of that division will
+then be returned.
+create a function with the following function definition: void callfunc(float a,float b,float c). This function first call
+the function divideValues using the input values a,b and c as the input values for the divideValues function. You are
+to then print out the value returned from the function divideValues.
+
+Give the following function calls:
+addValues(2,4,6);
+callfunc(36.0,3.0,2.0);
+The output should be printed as follows:
+12
+6.0
+Don't worry about extra decimal points

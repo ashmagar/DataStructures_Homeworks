@@ -1,0 +1,42 @@
+Homework 7
+
+Finish writing code for all of the functions that we did not finish in class
+add a third variable to the data structure in data.h. This variable will of type char and be named numeral
+
+Given the function definition struct data* createDataNumeral(char num). This function will allocate space for a data
+structure and set the new variable numeral in the data struct equal to the input variable num. This function will be
+added to the data.h and data.c files.
+
+Given the function int convertRomanNumeralStack(struct stack *s). This function will calculate the value of the
+roman numeral that is on the stack and return it. However, unlike traditional roman numerals, we can have negative
+numbers. A negative number is produced when the roman numerals are ordered from smallest to largest. When the
+numerals are not ordered from smallest to largest, the number is calculated as a traditional roman numeral. The
+numerals are read from left to right. This is the same order, from left to right, that the numbers should be pushed on
+to the stack. Print the returned value from this function followed by a newline
+Examples:
+VII would print
+7 IIIIIIIV would print
+-2M
+CMXCIX would print
+1999
+IIIVVVX would print
+-8
+
+Given the function int convertRomanNumeralQueue(struct queue *q). The function will calculate the value of the
+roman numeral that is on the queue and return it. However, unlike traditional roman numerals, we can have negative
+numbers. A negative number is produced when the roman numerals are ordered from smallest to largest. When the
+numerals are not ordered from smallest to largest, the number is calculated as a traditional roman numeral. The
+numerals are read from left to right. This is the same order, from left to right, that the numbers should be pushed on
+to the queue. The value returned from this function should match the values that are returned from the
+getRomanNumeralStackFunction. Print the returned value from this function followed by a newline
+
+Modify you main function so that it takes in command line arguments. The command line arguments will be the
+executable followed by the roman numeral you wish to convert.
+ex: ./main XXVI
+All roman numerals entered will be in uppercase.
+Each letter of the roman numeral you wish to convert should be pushed onto both a stack and a queue, then call both
+the stack and queue versions of the convertRomanNumeral functions. Finally, print the returned values from those
+functions
+
+You will need to create both a stack and a queue in the main.c file. So you will have to take the queue and stack files
+and place them in the same directory. You may also need to change you make file for this.

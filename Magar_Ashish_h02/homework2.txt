@@ -1,0 +1,78 @@
+Homework 2
+
+Processors have the ability to heat up to 400 degrees C. If a computer becomes too hot then the processor will melt
+and the system will be ruined. However, computer fans can consume a large amount of power. In order to make the
+system as power efficient as possible, you have to make sure that least number of fans are used in the system. To
+matters even more complicated, not all fans will fit all computers. You can assume that a fans size is equal to its
+cooling power. So for example if a fan has a size of 3, then it cooling power is also 3. However, the power
+consumption of a fan is its size time itself. So, if a fan had a sizeof 3,then its power consumption would be 9 (3*3). If
+a fan had a size of 4, then its power consumption would be 16 (4*4). Given the following function definition: void
+getMinFans(int fanSizes[],int numFans, int coolingNum), you are to write a function that will print the the fans that
+will cool the computer with the smallest amount of power consumption. The array, fanSizes will contain all of the
+fan sizes that fit the computer. The input variable numFans will be equal to the number of fans in the array fanSizes.
+The final input variable cooling Num is the minimum amount of cooling power needed by the fans so the computer
+does not melt down. You are only allowed to use each fan once.
+
+Given the following inputs
+fanSizes[] = 1,2,3,4; numFans = 4; coolingNum = 5;
+The correct output would be the following:
+2 3
+
+There are 2 possible answers to this question. The first solution is to use fans 2 and 3. The total power consumption
+of fans these fans is (2*2)+(3*3) = 13. The second solution is to use fans 1 and 4. The total power consumption for
+these fans are (1*1)+(4*4) = 17. Since fans 2 and 3 have a lower power consumption.
+
+Given the following inputs:
+fanSizes[] = 1,2,3,4,5,6,10 numFans = 7 coolingNum = 10
+The correct output would be the following:
+1 2 3 4
+
+
+A very important high performance computer is starting slow down. The reason for this is due to the data on the
+computer being spread across a number of hard drives. The solution to this problem is to consolidate the data on the
+minimum number of drives. Given the array used, representing the amount of space that is being used on each drive,
+and a corresponding array called total, that represents the total amount of data that can be stored on each disk that is
+mentioned in used. Your job is to find the minimum number of drives you can compact the data onto. Given the
+following function definition: int minHardDrives(int used[],int usedSize,int total[],int totalSize). This function will
+find the minimum number of drives needed to compact the data and return that value.
+
+Given the following inputs:
+used[] = {14,20,10,22}; usedSize = 4; total[] = {80,120,120,80}; totalSize = 4;
+
+The correct output would be:
+1
+The total data used is 68. Since this will fit onto 1 disk of size 80, then 1 is returned. The number of disks used to
+store the compressed data.
+
+Given the following inputs:
+used[] = {60,20,30,40}; usedSize = 4; total[] = {80,120,120,80}; totalSize = 4;
+
+The correct output would be:
+2
+The total data used is 150. For this example you would need 2 drives of any size to store the compressed data. So for
+this example 2 would be returned.
+
+
+You have been recently hire at a high end electronics store. For your first task, your boss has asked you to write a
+program to find the item that has made the company the most money. What you will be given are three arrays with
+information. The first array, called cost, will contain the how much each item costs the store. The second array,
+called sales, will contain how much the store sells each of the items. The final array, called unitSales, will contain
+how many units of each item has been sold. An items profit is determined by the number of items sold times the
+sales price minus the cost of the item (unitSales * (sales - cost)). Finally return the position in the array of the item
+that has the highest profit. Given the following function declaration: int findProfit(int cost[], int sales[], int
+unitSales[],int arraySizes). All arrays passed to this function will have a size equal to array size.
+
+Given the following inputs:
+int cost[] = {4,3,7}; int sales[] = {5,6,9}; int unitSales[] = {1,1,1}; int arraySize = 3;
+
+The correct output:
+1
+The item in position 0 yeilds a profit of (5-4)*1 = 1. The item at position 1 yeilds a profit of (6-3)*1= 3. And finally
+the item at position 2 has a profit of (9-7)*1 = 2. Since the item at position 1 has the highest profit a 1 is return as the
+result.
+
+Given the following inputs:
+int cost[] = {1,2,7}; int sales[] = {2,6,9}; int unitSales[] = {1,2,6}; int arraySize = 3;
+
+The correct output:
+2

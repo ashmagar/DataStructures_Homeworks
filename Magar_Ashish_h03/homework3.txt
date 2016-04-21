@@ -1,0 +1,60 @@
+The geometric series is define as the following
+1 - x + x^2 - x^3 + x^4 ....
+for 0 < x < 1 
+
+If the geometric series is calculated out to enough terms it will eventually be equal the following equation:
+
+1 / 1 + x
+
+However, since it would take to long for the geometric series to be equal to the expected value, you are to calculate the geometric series out until it is within an error of the expected value. This error is equal to the absolute value of the current sum of the geometric series and the expected value
+
+So if you were given a value of 0.5 for x and and a an error tolerance of 0.001, the calculated terms would be the following:
+Term 1 1 0.333333
+Term 2 0.5 0.166667
+Term 3 0.75 0.0833333
+Term 4 0.625 0.0416667
+Term 5 0.6875 0.0208333
+Term 6 0.65625 0.0104167
+Term 7 0.671875 0.00520833
+Term 8 0.664063 0.00260417
+Term 9 0.667969 0.00130208
+Term 10 0.666016 0.000651042
+
+You stop calculating the geometric series after the 10th term because the calculated error is less than 0.001.
+
+For this weeks homework you are to place the following structures and functions in the files hw3.h and hw3.c
+
+Create a structure that contains an integer (maxTerms), and 2 floats (errorTol and x). The name of this struct type is
+geoData. If the above example were to be placed in a geoData struct x would be 0.5, errorTol would be equal to
+0.001 and maxTerms would be equal to 50.
+
+Create a function with the following function definition: struct geoData createGeoData(int max, float error, float x).
+This function will create a geoData struct and set the values of the struct to the input values. Finally return the struct.
+So if the above example where to be placed into a struct, the function call would look like the following:
+struct geoData gd = createGeoData(50,0.001,0.5);
+
+Create a function with the following definition: struct geoData calculateGeo(struct geoData gd). This function will
+take in a geoData struct and calculate the geometric series. You will stop calculating the geometric series if one of
+two things happen. First, if the calculated error is less than the input value errorTol, then stop the calculations. Or,
+you will stops the calculations if the number of calculated terms is equal to the input value maxTerms. Once you
+have finished calculating terms for the geometric series you are to create a new geoData struct and save the last
+calculated term to maxTerm, the last calculated value of the geometric series to x and the last calculated error to
+errorTol. Finally, return the geoData struct with the saved values.
+
+Create a function with the following definition: void printGeoData(struct geoData gd). The function will take in a
+geoData struct and print out the values of the geoData struct in the order of maxTerm, followed by x, followed by
+errorTol. So if the function were to be called with data returned from the above example in it, the the output would look 
+like the following:
+
+10 0.666016 0.000651042
+
+Create a function with the following function definition: void calculateGeoSeries(struct geoData gd[],int arraySize).
+This function will take in an array of geo data structs. For each geoData struct in the input array, you will call the
+function calculateGeo to calulate the geometric series for the given input. After each time the calculateGeo is called,
+print out the returned structure using the printGeoData function
+
+Create a file called main.c which contains the main function. In the main function you are to first create an array of
+geoData structs using the createGeoData function. Once the array has been created, you will call the
+calculateGeSeries function to calculate and print out the results from the geometric series calculations.
+
+Include a makefile to compile the files hw3.c and main.c into an exectuable called main

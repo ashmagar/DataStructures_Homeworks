@@ -1,0 +1,60 @@
+Homework 4
+
+Random files
+
+Create the following functions in the files hw4.h and hw4.c. Be sure that you download the files random.h and
+random.c and include them in the file hw4.h.
+
+Create a structure called data. This structure will contain three variables that will all be integers. The first variable
+will be called Start. The second variable will be called End. The final Variable will be called Max.
+
+Create another structure call input. This structure will contain 2 variables. The first variable will be a pointer to an
+array of integers, and will be called array. The second variable will be an integer called size. Ideally the value of size
+will be equal to the number of element in the array.
+
+Create a function with the following definition: struct input* generateArray(int size). In this function you are to use
+malloc to allocate space for a input structure. Once you have done that you will need to use malloc to allocate space
+for an array of integers and fill the array with random numbers. To generate random numbers use the function call
+getRand() which I have provided in the random.h file. Once the array is filled, set the variables in the structure and
+return a pointer to the allocated structure.
+
+Create a function with the following definition: data* generateData(int s,int e). In this function you will malloc space
+for a data structure. Once allocated, set the structure variables Start equal to s, End equal to e and Max to -99999.
+Finally return a pointer to the allocated structure.
+
+Create a function with the following definition: struct data** generateDataArray(int size). This function will allocate
+space for an array of pointers to data structures with the number of elements equal to size. One the array of pointers
+is created, you are to set each pointer in the array to a newly created data structure that has the start variable equal to
+a random number between 0 and size/2 and the end variable equal to size/2 and size (use my generateRandBetween
+function for this). The size value that you are to pass to this function is the same value that you pass to the
+generateArray function. For example: if you call generateArray(5) then you would call generateDataArray(5). Hint: I
+would use the generateData function to create the pointers to the structures.
+
+Create a function with the following definition: void getMax(struct input *inputArr, struct data *dVals). This
+function is going to find the maximum difference between two elements, i and j where j > i, in the array found inside
+the input variable inputArr. The two elements that provide the maximum difference must fall between the values of
+start and end found in the input variable dVals. Once the max difference is found, it is to be saved to the variable
+
+max in dVals. So if the input structures looked as follows:
+inputArr: array = {2,5,3,11,4,1};
+size = 6;
+dvals: Start = 1;
+End = 4;
+
+The max difference would be found at positions 2 and 3. The difference produced between these two positions is
+(11-3) or 8. So the variable max in dvals would be set to 8.
+
+Create a function with the following definition: void printData(struct data **d, int dataSize). This function will print
+out the values in the data structure in the array, with start first, end second and max third. So if the above example
+were to be printed out, it would look like the following:
+1 4 8.
+
+Create a function with the following definition: void findMax(struct data **points, int pointsSize, struct input
+*inputs). This function will call the function getMax for each data structure in the array.
+
+Create a file called main that contains a main function. In the main function first call the function SeedRand from the
+random.h file. Then generate an array of random numbers with the generateArray function. Next, generate a pointer
+array of data structures with the generateDataArray function. Then find the max for each input structure in the array
+with the getMax function. Finally, print each input structure in the array using the printData function. Be sure to
+
+create a makefile to compile your code.

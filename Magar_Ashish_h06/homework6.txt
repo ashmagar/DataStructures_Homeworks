@@ -1,0 +1,38 @@
+Homework 6
+
+Add a variable to the the data structure in the data.h file. This variable will be of type char* and be named letters.
+
+Given the function definition struct data* createDataLetters(char *str). You are to add this function to the files data.h
+and data.c. This function will allocate space for a new data structure. Then, allocate space for a c string inside of the
+newly created data struct. This string should contain the the same number of characters as the input string str (Be
+sure to add space for the null terminating character). Finally copy the input string to the string inside that data struct
+and return the data pointer. You can set the variables v1 and v2 to 0.
+
+Given the following function definition void addNPos(struct linkedList *ll, struct data *dta, int n). You are to add a
+new node to the nth position in the linked list. If the position n is larger than the number of elements in the linked list
+then add to the end of it. The number n will always be positive. The first node in the linked list will be position 0.
+
+Given the following function definition: void removeNPos(struct linkedList *ll, int n). You are to remove the node at
+the nth position in the linked list. If n is larger than the size of the linked list then remove the node on the end. The
+number n will always be positive. The first node will be position 0.
+
+Given the following function definition void cleanLinkedList(linkedList *ll). This function will free all malloc'ed
+memory in the linkled list. Be sure that you free the string in each of the data elements.
+
+Given the following function definition: char* getLetterCount(struct linkedList *ll). The function will find the letters
+that appear the same number of times in each of the nodes in the linked list. An example of this would be if the letter
+a appears 2 times in the first node, then it must appear 2 times in all of the other nodes in the linked list. Finally, a c
+string of all the valid letters is returned. If no valid letters have been found then return NULL. The output string can
+be any order. This function has to run O(n) time complexity
+
+Modify your main.c file so that it takes in input from the command line (command line arguments). The command
+line arguments will be the executable followed by a set of input strings. All input strings will be made of lower case
+letters only and the letters are not guaranteed to be in sorted. The input You are to take each of the input strings an
+place them into the linked list in any order. Once the strings have been added to the linked list, call the
+getLetterCount function and print out the returned string. An example of what this input will look like is the
+following:
+./main aabcd aaxyz aattt aa
+output:
+aa
+./main abgbchba batbaycebd dycbubaiba dzxbababcw
+aabbbc
